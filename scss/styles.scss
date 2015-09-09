@@ -104,7 +104,13 @@ body { background: url("../img/bg_pt1.png") repeat; color: #555; font-family: $f
     border-color: #d6d6d6;
     border-top: 1px solid #d6d6d6;
 	text-align: center;
-   .nav { margin: 0; display: inline-block; }
+   .nav { 
+     margin: 0; display: inline-block; 
+     > li > a {  
+	   border-top: 1px solid transparent; 
+	   &:hover, &.active {  border-top: 1px solid #555; }	
+	 }
+   }
   }
   
 }
