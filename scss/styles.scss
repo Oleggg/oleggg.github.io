@@ -62,7 +62,14 @@ body { background: url("../img/bg_pt1.png") repeat; color: #555; font-family: $f
   margin-top: 2em; margin-bottom: 0; padding-left: 0; list-style: outside none none; background: #eee none repeat scroll 0 0;
   > li { 
     float: left;
-    > a { padding: 1.5em 2.5em; display: block; position: relative; color: #444; text-decoration: none; }
+    > a { 
+	  padding: 1.5em 2.5em; display: block; position: relative; color: #444; text-decoration: none; border-top: 3px solid transparent; 
+					transition: border-color .25s linear; 
+			-moz-transition: border-color .25s linear; 
+		-webkit-transition: border-color .25s linear; 
+			   -o-transition: border-color .2s linear; 
+      &:hover, &.active {  border-top: 3px solid; }	  
+    }
   }
 }
 
@@ -86,7 +93,7 @@ body { background: url("../img/bg_pt1.png") repeat; color: #555; font-family: $f
 
 .content { 
   padding: 2em 0; background: rgba(238, 238, 238, 0.8) none repeat scroll 0 0;
-  p { line-height: 1.4; max-width: 75%; }
+  p { line-height: 1.8; max-width: 75%; }
 }
 
 
