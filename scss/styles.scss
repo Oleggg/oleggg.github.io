@@ -1,0 +1,89 @@
+@import "normalize";
+@import "../bower_components/susy/sass/susy";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+$susy: (
+  columns: 12, 
+  container: 1140px,
+  gutters: 0.25,
+  global-box-sizing: border-box,
+  //debug: (image: show-columns)
+  );
+
+.testing {
+  @include span(12);
+}
+
+.testing2 {
+  @include span(2);
+  margin-left: span(4);
+}
+
+.testing3 {
+  @include span(2);
+  margin-left: span(6);
+  @include breakpoint(20em) {
+    @include span(4); 
+    margin-left: span(3);
+  }
+}
+
+
+/* ============================
+	Grid
+   ============================ */
+
+.wrapper {
+  @include container;
+}
+
+.header,.content,.footer {
+  @include span(12);//border: 1px solid;
+}
+
+
+/* ============================
+	Common styles
+   ============================ */
+body { background: url("../img/bg_pt1.png") repeat; color: #555; }
+
+
+.header { min-height: 500px; }
+
+.logo { float: left; }
+.logo a { padding: 2em; display: inline-block; color: #e33b3b; font-size: 1.5em; font-weight: bold; }
+
+.header-menu { float: right; }
+
+.nav { 
+  margin-top: 2em; margin-bottom: 0; padding-left: 0; list-style: outside none none; background: #eee none repeat scroll 0 0;
+  > li { 
+    float: left;
+    > a { padding: 1.5em 2.5em; display: block; position: relative; color: #444; text-decoration: none; }
+  }
+}
+
+.nav::after { clear: both; content: " "; display: table; }
+
+
+/* ============================
+	SLIDER
+   ============================ */
+.slider {
+  position: absolute; bottom: 0; left: 0; right: 0; top: 0; z-index: -1; 
+  img { width: 100%; }
+}
+.slider__text { 
+  color: #eee; left: 13%; position: absolute; top: 12%; 
+  > h1 { margin-bottom: 0.4em; font-size: 5em; font-weight: normal; }  
+  > p { font-size: 2em; }
+}
+
+
+.content { 
+  padding: 2em; background: rgba(238, 238, 238, 0.8) none repeat scroll 0 0;
+  p { line-height: 1.4; max-width: 75%; }
+}
+
+
+.footer { background: #eee none repeat scroll 0 0; min-height: 200px; }
