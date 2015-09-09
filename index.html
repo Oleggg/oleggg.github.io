@@ -6,17 +6,44 @@
   <link rel="stylesheet" href="css/kelson_sans_regular.css">
   <link rel="stylesheet" href="css/kelson_sans_light.css">
   <link rel="stylesheet" href="css/styles.css">
+  
+  <script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script> 
+  <script type="text/javascript" src="js/vendor/jquery.bxslider.min.js"></script>
 </head>
 <body>
 
-<section class="slider">
-	<div class="">
+<script>
+	$(document).ready(function(){
+	  $('.js-bxslider').bxSlider({
+		auto: true,
+		controls: false,
+		//mode: 'fade',
+		pager: false,
+		/*onSliderLoad: function(){
+			$(".main-slider").css("visibility", "visible");
+		}*/
+	  });	  
+	});
+</script>
+
+<section class="slider js-bxslider">
+
+	<div class="slider__item">
 		<img src="img/Ferrari-488-GTB.jpg" />
 		<span class="slider__text">
 			<h1>488 GTB</h1>
 			<p>V8 3.9, 670 л.с.</p>
 		</span>
 	</div>
+
+	<div class="slider__item">
+		<img src="img/Ferrari-F430-Spyder.jpg" />
+		<span class="slider__text">
+			<h1>430 Spyder</h1>
+			<p>V8 3.9, 590 л.с.</p>
+		</span>
+	</div>
+	
 </section>
 
 <!--div class="wrapper"-->
@@ -66,7 +93,15 @@
 		
 	</section>
 	<section class="footer">
-	
+		<div class="footer__menu container">
+			<ul class="nav">
+				<li><a href="#"><span>ГЛАВНАЯ</span></a></li>
+				<li><a href="#"><span>НОВОСТИ</span></a></li>
+				<li><a href="#"><span>ИСТОРИЯ</span></a></li>
+				<li><a href="#"><span>СОБЫТИЯ</span></a></li>
+				<li><a href="#"><span>ОБ АВТОРЕ</span></a></li>
+			</ul>
+		</div>
 	</section>
 		
 <!--/div-->

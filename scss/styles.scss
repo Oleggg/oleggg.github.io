@@ -2,6 +2,8 @@
 @import "../bower_components/susy/sass/susy";
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
+@import "variables";
+
 $susy: (
   columns: 12, 
   container: 1140px,
@@ -33,7 +35,8 @@ $susy: (
 	Grid
    ============================ */
 
-.wrapper {
+.wrapper,
+.container {
   @include container;
 }
 
@@ -79,6 +82,7 @@ body { background: url("../img/bg_pt1.png") repeat; color: #555; font-family: $f
   > p { font-size: 2em; }
 }
 
+.bx-wrapper { position: absolute; }
 
 .content { 
   padding: 2em; background: rgba(238, 238, 238, 0.8) none repeat scroll 0 0;
@@ -86,4 +90,14 @@ body { background: url("../img/bg_pt1.png") repeat; color: #555; font-family: $f
 }
 
 
-.footer { background: #eee none repeat scroll 0 0; min-height: 200px; }
+.footer { 
+  padding: 4em 0; background: #eee none repeat scroll 0 0; /*min-height: 200px;*/ 
+  &__menu {
+    border-bottom: 1px solid #d6d6d6;
+    border-color: #d6d6d6;
+    border-top: 1px solid #d6d6d6;
+	text-align: center;
+   .nav { margin: 0; display: inline-block; }
+  }
+  
+}
